@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>css 선택자</title>
+    <style type="text/css">
+    	
+    	/*h1 글자색 - red
+    	p 글자색 - green*/
+
+    	h1{
+    		color: red;
+    	}
+    	p{
+    		color:green;
+    	}
+
+
+    	/* #아이디명{} 으로 호출 */
+    	#aaa {
+    		color:pink;
+    	}
+
+    	#third {
+    		color: yellow;
+    	}
+		
+		/* .클래스명{} 으로 호출*/
+    	.ccc {
+    		 color: blue;
+    	}
+		
+
+		/*    *  = 현재 페이지 모든 요소에 스타일을 주겠다.*/
+    	*{
+    		font-size: 30px;
+    		font-family: "나눔고딕", Dotum, sans-serif; /*나눔고딕부터 순서대로 서체를 찾아서 적용시킴. 나눔고딕 없으면 Dotum...순으로*/
+    	}
+
+    </style>
+  </head>
+  <body>
+  	<h1>type 선택자	</h1>
+	
+	<!-- <시작태그> 내용 </종료태그> -> 전체를 요소(elements)라 정의. -->
+	<!-- 첫번째 p태그만 글자색을 핑크색으로 바꾸고 싶다. -->
+	<!-- - 그럴려면 각각의 요소를 구분할 수 있어야함. -> id라는 속성을 부여해 가능(유의미있게, 중복 x) 중복되면 브라우저가 임의로 선정해버림. -->
+	
+	<!-- 동시에 여러 요소를 묶어서 한번에 같은 효과를 주고 싶은 경우: class -->
+
+	<p id="aaa">HTML의 모든 요소는 선택자로 사용 가능</p>
+	<p class="ccc">HTML의 모든 요소는 선택자로 사용 가능</p>
+	<p id="third">HTML의 모든 요소는 선택자로 사용 가능</p>
+	<p class="ccc">HTML의 모든 요소는 선택자로 사용 가능</p>
+	<p class="ccc">HTML의 모든 요소는 선택자로 사용 가능</p>
+
+
+  	<p>
+  		css 선택자 <br>
+  		
+  		1. HTML tag <br>
+  		2. id ->  #  <br>
+  		3. class ->  .  <br>
+  		4. all ->  *  <br>
+
+  	</p>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+
+/*
+
+css 주석
+
+*/
+
+			*{
+    			margin: 0;
+    			/*모든 요소는 마진이있는데 그 간격을 없앰*/
+    			font-family: "돋움", "나눔고딕";
+
+    		}
+
+    		#wrapper{
+    			width: 1000px;
+    			margin: 2px auto 0 auto ;
+    			/*위, 오, 아래, 왼 -> 시계방향으로 설정*/
+    		}
+
+    		#logo{
+    			width: 1000px;
+    			height: 60px;
+    			background: url(../Images/admin_logo.gif);
+    			/*이미지를 뒤로 넣고 싶다.*/
+    		}
+
+			#menuwrapper{
+				width: 1000px;
+				height: 25px;
+				font-size: 12px;
+				background-color: #e0bbd8;
+			}
+
+			.menu{
+				color: black;
+				font-size: 13px;
+				
+				/*왼쪽에서 오른쪽으로 배치*/
+				float: left;
+				width: 90px;
+				height: 20px;
+				background-color: white;
+
+				text-align: center;
+				margin-left: 20px;
+			}
+
+			.menu:hover{
+				color: #e0bbd8;
+				font-weight: bold;
+				background-color: black;
+			}

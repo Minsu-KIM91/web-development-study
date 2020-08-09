@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>img+css</title>
+    <style type="text/css">
+    img{
+      width: 300px;
+      height: 300px;
+    }
+    
+    #mydiv2{
+      position: absolute;
+      left: 300px;
+      top: 8px;
+    }
+
+    #mydiv3{
+      position: absolute;
+      left: 600px;
+      top: 8px;
+    }
+
+    </style>
+  </head>
+  <body>
+<!--   	상대주소
+  	. : 현재 디렉토리
+  	.. : 부모 디렉토리 -->
+  	
+    <!-- 부모한테 갔다가 형제한테 가기 -->
+
+
+  	<!-- div#midiv1>img+p 입력 후 tab -->
+  	<div id="mydiv1">
+  		<img src="..\images\simbo1.jpg" alt="설거지 하는 심보">
+  		<p>설거지 하는 심보</p>
+  		<!-- C:\web\images 절대주소 입력하고 들어가면 인터넷에 다 나온다. -->
+      <!-- 해킹에 위험이 임있으므로 상대주소 사용. -->
+  	</div>
+
+    <div id="mydiv2">
+      <img src="..\images\simbo2.jpg" alt="안마하는 심보">
+      <p>안마하는 심보</p>
+    </div>
+
+    <div id="mydiv3">
+      <img src="..\images\simbo3.jpg" alt="말동무 심보">
+      <p>말동무 심보</p>
+    </div>
+
+
+
+
+
+  </body>
+</html>

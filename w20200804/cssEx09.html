@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS position</title>
+    <style type="text/css">
+    	#div1{
+    		width: 200px;
+    		height: 200px;
+    		
+    		border: 2px solid red;
+    	}
+    	#div2{
+    		width: 200px;
+    		height: 200px;
+    		border: 2px solid green;
+    		
+			/*position: relative;*/
+			position: absolute;
+			left: 100px;    		
+			top: 100px;
+			/*top: -150px;*/
+    	}
+		#div3{
+    		width: 200px;
+    		height: 200px;
+    		border: 2px solid blue;
+    		
+			/*position: relative;*/
+			position: absolute;
+			left: 200px;
+			/*left: 400px;    		*/
+			top: 200px;
+			/*top: -100px;*/
+    	}
+    </style>
+  </head>
+  <body>
+  	<!-- (div#div$)*3 -->
+  	<div id="div1">AAA</div>
+  	<div id="div2">BBB</div>
+  	<div id="div3">CCC</div>
+  </body>
+</html>

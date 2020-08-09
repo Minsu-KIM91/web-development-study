@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>window</title>
+    <script type="text/javascript">
+    	    	alert("click");
+
+    	var m = window.open("","","width=300, height=200");
+    	// console.dir(m);
+
+      m.moveTo(0,0);
+
+      //1초 단위로 팝업화면을 움직일 거다
+      window.setInterval(function(){
+        m.moveBy(10,10);
+
+      }, 1000); //조정을 밀리 세컨드 단위로
+
+    </script>
+
+  </head>
+  <body>
+  	
+  </body>
+</html>
