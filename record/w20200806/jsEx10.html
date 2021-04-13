@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    	
+		function prt(){
+			//id로 중복되지 않게 검색하여 텍스트필드에 사용자가 입력한 데이터를 
+			//가져오기
+			var txt = document.getElementById("txt1");
+
+			//txt를 출력하면 객체 정보만 가져옴. 
+			// 객체안의 내용(사용자가 입력한 데이터)를 가지고 오고 싶으면
+			// .value 까지 입력해야함.
+			console.log(txt.value);
+
+			// 반대로 객체값을 바꿔서 내보낼 수도 있다.
+
+			txt.value = "어서와요 파이썬.";
+			// 입력은 텍스트값으로 하고 그 필드에는 위에 값 나옴.
+			// console.log(txt.value);
+		}
+
+    </script>
+
+
+
+
+  </head>
+  <body>
+  	<input type="text" name="" id="txt1">
+  	<input type="button" value="출력", onclick="prt()">
+  	
+  </body>
+</html>

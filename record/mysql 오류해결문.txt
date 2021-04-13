@@ -1,0 +1,69 @@
+mysql -u root -p
+1234
+
+set global init_connect='set names utf8, collation_connection=utf8_general_ci';
+
+
+mysql -u scott -p testdb
+tiger
+
+
+
+ create table tbl_board (
+    bno int not null auto_increment,
+    subject varchar(200) not null,
+    contents text null,
+    writer varchar(50) not null,
+    regdate timestamp not null default now(),
+    hit int default 0,
+    primary key(bno));
+
+insert into tbl_board (subject, contents, writer)
+values ('subject_test', 'hello spring', 'hong');
+
+select * from tbl_board;
+
+insert into tbl_board (subject, contents, writer)
+(select subject, contents, writer from tbl_board);
+
+
+
+delete from tbl_board where bno > 300;
+
+
+
+mysql 삭제 
+: 서비스 mysql stop
+: C 드라이브 -> mydata/data-> 삭제 (로그기록이 있음)
+: cmd(관리자) - mysql -- remove
+
+
+mysql> create table reply(
+     rebid int not null auto_increment,
+     bid int not null default 0,
+     replyContent varchar(1000) not null,
+     replyer varchar(50) not null,
+     regdate TIMESTAMP not null default now(),
+     updateDate TIMESTAMP not null default now(),
+     primary key(rebid));
+
+mysql> alter table reply add constraint reply_bid_fk foreign key(bid) references tbl_board(bid);
+
+
+
+desc reply;
+
+mysql> desc reply;
++--------------+---------------+------+-----+-------------------+----------------+
+| Field        | Type          | Null | Key | Default           | Extra          |
++--------------+---------------+------+-----+-------------------+----------------+
+| rebid        | int(11)       | NO   | PRI | NULL              | auto_increment |
+| bid          | int(11)       | NO   | MUL | 0                 |                |
+| replyContent | varchar(1000) | NO   |     | NULL              |                |
+| replyer      | varchar(50)   | NO   |     | NULL              |                |
+| regdate      | timestamp     | NO   |     | CURRENT_TIMESTAMP |                |
+| updateDate   | timestamp     | NO   |     | CURRENT_TIMESTAMP |                |
++--------------+---------------+------+-----+-------------------+----------------+
+6 rows in set (0.01 sec)
+
+

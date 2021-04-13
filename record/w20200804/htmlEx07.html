@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>회원가입</title>
+  </head>
+  <body>
+  	<form action="#" method="get">
+  		ID : <input type="text" name="ID" id=""><br>
+  		PW : <input type="text" name="PW" id=""><br>
+  		gender : <input type="radio" name="gender" id=""> 남
+  				 <input type="radio" name="gender" id=""> 여 <br>
+           <!-- 다중선택 불가 체크 -->
+
+  		hobby : <input type="checkbox" name="hobby" id=""> 독서
+  				<input type="checkbox" name="hobby" id=""> 음주		 
+  				<input type="checkbox" name="hobby" id=""> 가무	<br>
+          <!-- 다중선택이 가능한 체크박스 -->
+  		menu :
+  		<select name="menu" id="">
+  			<option value="-------">-------</option>
+  			<option value="버거킹">버거킹</option>
+  			<option value="롯데리아">롯데리아	</option>
+  			<option value="맥도날드">맥도날드	</option>
+  			<option value="맘스터치">맘스터치	</option>
+			<!-- 사용자가 보는 건 흰글씨 그러나 서버에는 value값이 들어간다. -->
+
+
+  		</select> 	
+  		<br>
+  		<input type="submit" value="가입">
+      <!-- 서버에 입력받은 데이터를 전송하기 위해서는 submit이라는 키워드를 사용한다. -->
+      <!-- 자동으로 데이터를 전송할 수 있는 버튼이 생성되고, 그 버튼을 클릭하면 지정된 URL로 form태그 안에 입력된 값들이 action속성으로 지정된 서버 페이지로 전송된다. -->
+
+
+
+  	</form>
+  </body>
+</html>

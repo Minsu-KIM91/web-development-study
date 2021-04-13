@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+   		function viewResult(){
+    		var m1 = document.getElementById("m1");
+    		var m2 = document.getElementById("m2");
+    		var m3 = document.getElementById("m3");
+    		var m4 = document.getElementById("m4");
+    		var m5 = document.getElementById("m5");
+    		//console.dir(m1);
+
+    		var img = document.getElementById("img");
+    		var src = "";
+
+    		if(m1.checked){
+    			src = "..\\Images\\movie_image1.jpg";
+    		}else if(m2.checked){
+    			src = "..\\Images\\movie_image2.jpg";
+    		}else if(m3.checked){
+    			src = "..\\Images\\movie_image3.jpg";
+    		}else if(m4.checked){
+    			src = "..\\Images\\movie_image4.jpg";
+    		}else if(m5.checked){
+    			src = "..\\Images\\movie_image5.jpg";
+    		}
+
+    		img.src= src;
+    		console.log("-----------------------");
+
+    		// id를 이용해서 DOM 객체를 만들지 않고 문서의 path로도 가능
+    		console.log(document.frm.movie[0].checked);
+
+
+
+
+
+    	}
+
+
+
+    </script>
+  </head>
+  <body>
+  	<h2>마음에 드는 영화를 선택하세요.</h2>
+  	<form action="#" name="frm">
+  		<input type="radio" name="movie" id="m1">정직한 후보
+  		<input type="radio" name="movie" id="m2">작은아씨들
+  		<input type="radio" name="movie" id="m3">클로젯
+  		<input type="radio" name="movie" id="m4">기생충
+  		<input type="radio" name="movie" id="m5">슈퍼소닉
+
+  		<input type="button" value="결과보기" onclick="viewResult()">
+  		<img src="" alt="" id="img">
+  	</form>
+  	
+  </body>
+</html>
